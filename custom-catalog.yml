@@ -144,13 +144,9 @@ categories:
                 description: The layer where the module is deployed
               - name: type
                 description: The type of module where the module is deployed
-        id: github.com/cloud-native-toolkit/terraform-gitops-swagger-editor
+        id: github.com/nheidloff/terraform-gitops-guestbook-helm
         group: ""
         displayName: terraform-gitops-guestbook-helm
-aliases:
-  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-watson-studio
-    aliases:
-      - github.com/cloud-native-toolkit/terraform-ibm-watson-studio
 providers:
   - name: ibm
     source: ibm-cloud/ibm
