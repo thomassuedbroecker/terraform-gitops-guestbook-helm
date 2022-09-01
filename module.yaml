@@ -18,6 +18,14 @@ versions:
         refs:
           - source: github.com/cloud-native-toolkit/terraform-gitops-namespace.git
             version: '>= 1.0.0'
+      - id: cluster
+        refs:
+          - source: github.com/cloud-native-toolkit/terraform-ibm-container-platform
+            version: '>= 1.7.0'
+          - source: github.com/cloud-native-toolkit/terraform-ibm-ocp-vpc
+            version: '>= 1.0.0'
+          - source: github.com/cloud-native-toolkit/terraform-k8s-ocp-cluster
+            version: '>= 2.0.0'      
     variables:
       - name: gitops_config
         moduleRef:
