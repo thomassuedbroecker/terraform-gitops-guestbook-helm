@@ -19,7 +19,7 @@ locals {
     "service.port" = "80"
     }
   }
-  layer = "services"
+  layer = "applications"
   type  = "base"
   application_branch = "main"
   namespace = var.namespace
