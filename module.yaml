@@ -21,7 +21,7 @@ versions:
       - id: ibm-ocp-vpc
         refs:
           - source: github.com/cloud-native-toolkit/terraform-ibm-ocp-vpc
-            version: '>= 1.0.0'     
+            version: '>= 1.15.7'
     variables:
       - name: gitops_config
         moduleRef:
