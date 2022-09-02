@@ -7,16 +7,21 @@ locals {
   cluster_type = var.cluster_type == "kubernetes" ? "kubernetes" : "openshift"
   values_content = {
     helm-guestbook = {
-    clusterType = local.cluster_type
-    ingressSubdomain = var.cluster_ingress_hostname
-    "sso.enabled" = var.enable_sso
-    tlsSecretName = var.tls_secret_name
     replicaCount = "1"
     "image.repository" = "gcr.io/heptio-images/ks-guestbook-demo"
     "image.tag" = "0.1"
     "image.pullPolicy" = "IfNotPresent"
     "service.type" = "ClusterIP"
     "service.port" = "80"
+    "ingress.enabled" = "false"
+    "ingress.annotations" = null
+    "ingress.path" = "/"
+    "ingress.hosts" = ["chart-example.local"]
+    "ingress.tls" = []
+    "resources" = null
+    "nodeSelector" = null
+    "tolerations" = null
+    "affinity" = null
     }
   }
   layer = "applications"
